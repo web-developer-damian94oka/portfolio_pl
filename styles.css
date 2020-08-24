@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    color: rgb(235, 232, 232);
+}
+
+body {
+    background-color: dodgerblue;
+}
+
+nav {
+    background-color: mediumblue;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-link {
+    align-self: center;
+}
+
+.nav-link:hover a {
+    color: silver;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.lang-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    width: 43px;
+    background-color: rgb(64, 89, 116);
+    border-radius: 3px;
+    padding-left: 1px;
+    z-index: 4;
+}
+
+.lang-dropdown {
+    position: relative;
+}
+
+.lang-dropdown:hover  .hover-lang {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 50px;
+    width: 43px;
+    background-color: rgb(64, 89, 116);
+    border-radius: 3px;
+    padding-left: 2px;
+    padding-top: 15px;
+    z-index: 2;
+}
+
+.hover-lang {
+    display: none;
+}
+
+.flag {
+    height: 12px;
+    width: 25px;
+}
+
+.arrow {
+    height: 12px;
+    width: 15px;
+}
+
+@media only screen and (min-width: 960px) {
+
+    nav {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
+    .menu {
+        width: unset;
+        min-width: 40%;
+    }
+
+    .nick {
+        display: unset;
+        margin-left: 35px;
+    }
+
+    .lang-switch {
+        height: 30px;
+        width: 85px;
+        border-radius: 5px;
+        padding-left: 2px;
+    }
+
+    .lang-dropdown:hover .hover-lang {
+        padding-top: 30px;
+
+        height: 90px;
+        width: 85px;
+        background-color: rgb(64, 89, 116);
+        border-radius: 5px;
+        padding-left: 4px;
+    }    
+
+    .flag {
+        width: 50px;
+        height: 25px;
+    }
+    
+    .arrow {
+        width: 30px;
+        height: 25px;
+    }
+}
