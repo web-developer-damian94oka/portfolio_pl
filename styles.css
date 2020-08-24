@@ -15,10 +15,21 @@ nav {
     background-color: mediumblue;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     position: fixed;
+    width: 100%;
+}
+
+.nav-box {
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     width: 100%;
 }
 
@@ -32,8 +43,8 @@ nav {
 
 .menu {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     width: 80%;
 }
 
@@ -42,16 +53,17 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 15px;
-    width: 43px;
-    background-color: rgb(64, 89, 116);
-    border-radius: 3px;
-    padding-left: 1px;
+    height: 33px;
+    width: 85px;
+    background-color: rgb(114, 130, 148);
+    border-radius: 5px;
+    padding-left: 2px;
     z-index: 4;
 }
 
 .lang-dropdown {
     position: relative;
+    margin-right: 5px;
 }
 
 .lang-dropdown:hover  .hover-lang {
@@ -62,27 +74,41 @@ nav {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    height: 50px;
-    width: 43px;
-    background-color: rgb(64, 89, 116);
-    border-radius: 3px;
-    padding-left: 2px;
-    padding-top: 15px;
+    height: 95px;
+    width: 85px;
+    background-color: rgb(114, 130, 148);
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 30px;
     z-index: 2;
+}
+
+.flag {
+    width: 50px;
+    height: 25px;
+}
+
+.arrow {
+    width: 30px;
+    height: 25px;
 }
 
 .hover-lang {
     display: none;
 }
 
-.flag {
-    height: 12px;
-    width: 25px;
+.nick {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.arrow {
-    height: 12px;
-    width: 15px;
+.nav-link {
+    margin-bottom: 10px;
+}
+
+
+.lang-dropdown {
+    margin: 7px;
 }
 
 @media only screen and (min-width: 960px) {
@@ -90,42 +116,29 @@ nav {
     nav {
         justify-content: space-between;
         flex-direction: row;
+        font-size: 20px;
     }
     
     .menu {
-        width: unset;
-        min-width: 40%;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-box {
+        width: 50%;
+        justify-content: space-between;
+    }
+
+    .nick,
+    .nav-link,
+    .lang-dropdown {
+        margin: 15px;
     }
 
     .nick {
         display: unset;
-        margin-left: 35px;
+        margin-left: 60px;
     }
 
-    .lang-switch {
-        height: 30px;
-        width: 85px;
-        border-radius: 5px;
-        padding-left: 2px;
-    }
-
-    .lang-dropdown:hover .hover-lang {
-        padding-top: 30px;
-
-        height: 90px;
-        width: 85px;
-        background-color: rgb(64, 89, 116);
-        border-radius: 5px;
-        padding-left: 4px;
-    }    
-
-    .flag {
-        width: 50px;
-        height: 25px;
-    }
-    
-    .arrow {
-        width: 30px;
-        height: 25px;
-    }
 }
