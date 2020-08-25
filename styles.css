@@ -168,6 +168,7 @@ h2 {
 
 .screenshot {
     width: 90%;
+    height: 50vw;
 }
 
 #contact {
@@ -257,6 +258,7 @@ footer p:first-of-type {
 
     .screenshot {
         width: 100%;
+        height: unset;
     }
     
     #contact {
