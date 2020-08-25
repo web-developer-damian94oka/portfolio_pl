@@ -4,7 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-    color: rgb(235, 232, 232);
+    color: rgb(204, 204, 204);
 }
 
 body {
@@ -13,6 +13,7 @@ body {
 
 nav {
     background-color: mediumblue;
+    color: rgb(235, 232, 232);
     font-size: 15px;
     display: flex;
     flex-direction: row;
@@ -23,7 +24,7 @@ nav {
 }
 
 .nav-box {
-    width: 100%;
+    width: 100%; 
 }
 
 .nav-list {
@@ -35,6 +36,10 @@ nav {
 
 .nav-link {
     align-self: center;
+}
+
+.nav-link a {
+    color: rgb(235, 232, 232);
 }
 
 .nav-link:hover a {
@@ -100,6 +105,7 @@ nav {
 .nick {
     margin-top: 10px;
     margin-bottom: 10px;
+    color: rgb(235, 232, 232);
 }
 
 .nav-link {
@@ -117,7 +123,7 @@ nav {
     justify-content: center;
 }
 
-#welcome {
+#welcome-section {
     padding-top: 50px;
     height: 100vh;
     width: 90%;
@@ -137,13 +143,14 @@ h2 {
     padding-top: 70px;
     width: 100%;
     color: rgb(204, 204, 204);
+    margin-bottom: 50px;
+    font-size: 35px;
 }
 
 #projects {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
 }
 
 .projects-holder {
@@ -152,7 +159,7 @@ h2 {
     justify-content: center;
 }
 
-.project-link {
+.project-tile {
     display: flex;
     justify-content: center;
     margin: 20px 0 0 0;
@@ -160,6 +167,40 @@ h2 {
 
 .screenshot {
     width: 90%;
+}
+
+#contact {
+    font-size: 15px;
+}
+
+.contact-image {
+    height: 15px;
+}
+
+address {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-tile {
+    align-self: center;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+footer {
+    background-color: mediumblue;
+    display: flex;
+}
+
+footer p {
+    color: rgb(235, 232, 232);
+    font-size: 12px;
+    margin: 15px 0 15px 20px;
+}
+
+footer p:first-of-type {
+    display: none;
 }
 
 @media only screen and (min-width: 960px) {
@@ -197,7 +238,8 @@ h2 {
     }
 
     h2 {
-        font-size: 47px;
+        font-size: 60px;
+        margin-bottom: 60px;
     }
 
     .projects-holder {
@@ -207,7 +249,7 @@ h2 {
         flex-wrap: wrap;
     }
 
-    .project-link {
+    .project-tile {
         width: 45%;
         margin: 50px 25px 0 25px;
     }
@@ -216,4 +258,33 @@ h2 {
         width: 100%;
     }
     
+    #contact {
+        margin-top: 80px;
+    }
+
+    .contact-tile {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .contact-tile:last-of-type {
+        margin-bottom: 50px;
+    }
+
+    .contact-image {
+        height: 35px;
+    }
+
+    footer {
+        justify-content: space-between;
+    }
+    
+    footer p {
+        font-size: 15px;
+        margin: 25px;
+    }
+    
+    footer p:first-of-type {
+        display: unset;
+    }
 }
